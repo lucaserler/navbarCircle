@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="navbarCircle.css" type="text/css" media="screen"/>
     <title>NavBar Cricle</title>
 </head>
 <body>
-    <nav>
-        <div class="circle">
-            <div class="name">Lucas Erler</div>
-            <div class="expansion">passe o mouse aqui</div>
-        </div>
-    </nav>
+    <div class="circle">
+        <div class="name">Lucas Erler</div>
+        <div class="open-menu">clique aqui para mais</div>
+        <div class="item"><a href="https://www.linkedin.com/in/lucas-barina-erler-02204719b/" target="_blank" style="text-decoration:none"><i class="fa-brands fa-linkedin-in"></i></a></div>
+        <div class="item"><a href="https://github.com/lucaserler" target="_blank" style="text-decoration:none"><i class="fa-brands fa-github"></i></a></div>
+        <div class="item"><a href="https://www.instagram.com/lucas.erler/" target="_blank" style="text-decoration:none"><i class="fa-brands fa-instagram"></i></a></div>
+        <div class="item"><a href="https://web.whatsapp.com/" target="_blank" style="text-decoration:none" ><i class="fa-brands fa-whatsapp"></i></a></div>
+    </div>
+    <script>
+        let circle = document.querySelector('.circle'),
+        isOpened = false;
+
+        circle.addEventListener('click', function(){  //click //mouseover
+            if(isOpened){
+                circle.classList.remove('opened');
+            } else {
+                circle.classList.add('opened');
+            }
+            isOpened = !isOpened;
+        })
+    </script>
 </body>
 </html>

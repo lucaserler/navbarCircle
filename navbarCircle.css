@@ -15,6 +15,10 @@ body{
     box-shadow: inset 0px -50px 100px 20px rgba(0,0,20,1);
 }
 
+a{
+    color: black;
+}
+
 .circle{
     background: linear-gradient(
     150deg,
@@ -25,7 +29,7 @@ body{
     box-shadow: 5px 4px 20px 7px #522B5B;
     cursor: pointer;
 
-    border-radius: 150px;
+    border-radius: 50%;
     width: 250px;
     height: 250px;
 
@@ -37,7 +41,6 @@ body{
 
     top: 2rem;
     left: 2rem;
-
 }
 
 .name{
@@ -47,8 +50,55 @@ body{
     font-size: 43px;
 }
 
-.expansion{
+.open-menu{
     font-family:'Century Gothic';
     text-align: center;
     font-size: 15px;
 }
+
+.open-menu .item{
+    transition: transform 300ms ease-out;
+    transition-delay: 300ms;
+}
+
+.circle .item{
+    transition: transform 600ms ease-out;
+}
+
+.item{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+
+    border-radius: 50%;
+    font-size: 45px;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    z-index: -1;
+    
+    background: linear-gradient(
+        295deg,
+        #3D156B 27%,
+        #DF3562 75%,
+        #FEB97E 87%);
+}
+
+.item:hover{
+    background: linear-gradient(
+        295deg,
+        #491781 27%,
+        #f53f70 75%,
+        #ffd0a6 87%);
+}
+
+.opened .item:nth-child(3){transform: translateX(140px) translateY(-100px);}
+.opened .item:nth-child(4){transform: translateX(170px) translateY(-20px);}
+.opened .item:nth-child(5){transform: translateX(160px) translateY(65px);}
+.opened .item:nth-child(6){transform: translateX(110px) translateY(135px);}
+
+.item:nth-child(3){transition-delay: 50ms;}
+.item:nth-child(4){transition-delay: 100ms;}
+.item:nth-child(5){transition-delay: 150ms;}
+.item:nth-child(6){transition-delay: 200ms;}
