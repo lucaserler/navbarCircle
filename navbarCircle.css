@@ -14,8 +14,12 @@ body{
     backdrop-filter: blur(100px);
     box-shadow: inset 0px -50px 100px 20px rgba(0,0,20,1);
 }
+/*NOTA sobre o backdrop-filter: (já que esta resposta continua a ser rejeitada porque a Mozilla ainda não a enviou): 
+esta funcionalidade está disponível no Safari, Chrome e Edge, mas ainda não no Firefox. A Mozilla está planejando 
+enviá-lo muito em breve, mas ainda não o fez. Portanto, esta resposta não contém uma "solução alternativa",*/
 
 a{
+    text-decoration: none;
     color: black;
 }
 
